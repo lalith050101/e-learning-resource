@@ -19,6 +19,7 @@ public class ResourceModel {
 
     private String resourceLink;
 
+ 	@Column(name = "imageUrl",columnDefinition = "text")
     private String imageUrl;
     
     private String resourceCategory;
