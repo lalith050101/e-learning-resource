@@ -33,5 +33,12 @@ public class SignupController {
 		}
 		
 	}
+
+	@PostMapping("/")
+	public ResponseEntity<String> saveUser() {
+		
+		return new ResponseEntity<String> ("App working", HttpStatus.OK);
+		
+	}
 	
 }
