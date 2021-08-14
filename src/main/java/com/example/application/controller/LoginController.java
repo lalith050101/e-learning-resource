@@ -27,7 +27,7 @@ public class LoginController {
 		
 		if(userModel != null && userModel.getPassword().equals(loginModel.getPassword())) {
 			
-			return new ResponseEntity<String> ("true", HttpStatus.OK);
+			return new ResponseEntity<String> (loginModel.getEmail(), HttpStatus.OK);
 		}
 		else {
 			return new ResponseEntity<String> ("false", HttpStatus.FORBIDDEN);
