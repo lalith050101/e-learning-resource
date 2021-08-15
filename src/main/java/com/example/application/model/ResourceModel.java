@@ -27,7 +27,7 @@ public class ResourceModel {
 
     private Date createdOn;
 
-    @ManyToOne
+    @ManyToOne(fetch=FetchType.LAZY)
     private UserModel createdBy;
     
     private Boolean verified = false;
