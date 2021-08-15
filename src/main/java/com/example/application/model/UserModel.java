@@ -25,7 +25,7 @@ public class UserModel {
 
     private String role;
     
-    @OneToMany(mappedBy="createdBy", orphanRemoval = true, cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy="createdBy", orphanRemoval = true)
     private List<ResourceModel> resourceModel;
     
     @OneToMany(mappedBy="primaryUser")
