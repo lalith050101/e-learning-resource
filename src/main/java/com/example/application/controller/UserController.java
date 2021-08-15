@@ -35,7 +35,7 @@ public class UserController {
 	public ResponseEntity<?> deleteUser(@PathVariable String email) {
 		 try{
 			 userModelRepository.deleteById(email);
-				return new ResponseEntity<> ("deleted", HttpStatus.OK);
+				return new ResponseEntity<String> ("deleted", HttpStatus.OK);
 			
 			}
 			catch(Exception e) {

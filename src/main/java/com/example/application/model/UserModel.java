@@ -2,6 +2,7 @@ package com.example.application.model;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -24,7 +25,7 @@ public class UserModel {
 
     private String role;
     
-    @OneToMany(mappedBy="createdBy")
+    @OneToMany(mappedBy="createdBy", orphanRemoval = true, cascade = CascadeType.PERSIST)
     private List<ResourceModel> resourceModel;
     
     @OneToMany(mappedBy="primaryUser")
